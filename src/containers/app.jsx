@@ -14,9 +14,10 @@ const App = () => {
 	// Maneja los efectos sobre el estado
 	useEffect(() => {
 		fetch('http://localhost:3000/initialState')
-			.then(response => response.json)
+			.then(response => response.json())
 			.then(data => setVideos(data));
 	}, [])
+	console.log(videos);
 	return (
 		<div className="App">
 			<Header />
